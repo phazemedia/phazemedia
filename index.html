@@ -91,6 +91,26 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .pilot .btn{background:#fff;color:var(--maroon);border-color:#fff}
 .pilot .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 
+/* pricing */
+.pricing{background:var(--mist)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;position:relative}
+.plan.featured{border:2px solid var(--maroon);box-shadow:0 14px 40px rgba(128,0,32,.14)}
+.badge{position:absolute;top:-14px;left:28px;background:var(--maroon);color:#fff;font-size:13px;font-weight:700;padding:4px 14px;border-radius:999px}
+.plan h3{font-size:26px;font-weight:800}
+.vol{margin:6px 0 18px;font-weight:700}
+.vol span{display:block;font-weight:400;color:var(--muted);font-size:15px}
+.price{margin-bottom:20px}
+.price s{color:var(--muted);font-size:18px}
+.price b{font-family:var(--display);font-size:44px;font-weight:800;letter-spacing:-.02em;margin-left:6px}
+.price small{display:block;color:var(--maroon);font-weight:700;font-size:14px}
+.plan ul{list-style:none;margin-bottom:28px;flex:1}
+.plan li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:16px}
+.plan li:last-child{border-bottom:0}
+.plan li::before{content:"";position:absolute;left:3px;top:16px;width:12px;height:7px;border-left:3px solid var(--maroon);border-bottom:3px solid var(--maroon);transform:rotate(-45deg)}
+.plan .btn{text-align:center}
+.pricing .note{margin-top:26px;max-width:720px}
+
 /* faq */
 .faq{max-width:760px}
 details{border-bottom:1px solid var(--line);padding:18px 0}
@@ -108,6 +128,7 @@ form{max-width:420px;margin:0 auto;text-align:left;display:grid;gap:14px}
 label{font-size:14px;color:#d8d2d2;display:grid;gap:6px}
 input{font:inherit;padding:13px 14px;border-radius:6px;border:1px solid #444;background:#1f1f1f;color:#fff}
 input::placeholder{color:#8a8484}
+.hint{font-size:13px;line-height:1.5;color:#a8a1a1}
 form .btn{width:100%;text-align:center}
 .final .alt{margin-top:22px}
 .final .alt a{color:#fff}
@@ -118,7 +139,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media(max-width:820px){
   section{padding:64px 0}
   .links a:not(.btn){display:none}
-  .proof-grid,.steps{grid-template-columns:1fr}
+  .proof-grid,.steps,.plans{grid-template-columns:1fr}
   .reels{grid-template-columns:repeat(2,1fr)}
   .offer-card{padding:26px}
 }
@@ -127,12 +148,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </head>
 <body>
 
-<!-- ============ EDIT THESE 3 LINKS (search & replace across the file) ============
-  1) YOUR-CALENDLY-LINK   -> your Calendly booking URL
-  2) YOUR-INSTAGRAM       -> your Instagram profile URL
-  3) YOUR_FORM_ID         -> your Formspree form ID (formspree.io, free)
-================================================================================ -->
-
 <div class="slots">Only 3 new spots this month: 15% off your first month.</div>
 
 <nav>
@@ -140,9 +155,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="logo" href="#top">phaze media<span>.</span></a>
     <div class="links">
       <a href="#work">Work</a>
-      <a href="#offer">Offer</a>
+      <a href="#pricing">Pricing</a>
       <a href="#how">How it works</a>
-      <a href="https://calendly.com/YOUR-CALENDLY-LINK" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a>
+      <a href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a>
     </div>
   </div>
 </nav>
@@ -152,7 +167,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h1>You send the footage. We turn it into short-form content that brings you <em>clients.</em></h1>
     <p>Content planning, scripts, editing and motion graphics for fitness coaches. More DMs, more discovery calls, less time spent on content.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://calendly.com/YOUR-CALENDLY-LINK" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-primary" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
       <a class="btn btn-ghost" href="#contact">Request a free sample</a>
     </div>
   </div>
@@ -191,24 +206,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
-<section class="offer" id="offer">
-  <div class="wrap">
-    <h2>The Short-Form Content Engine.</h2>
-    <p class="lede">One monthly package. No add-ons to figure out.</p>
-    <div class="offer-card">
-      <ul>
-        <li>12 short videos per month (Reels, Shorts, TikTok)</li>
-        <li>Hooks and scripts for every video</li>
-        <li>Retention-focused editing and captions</li>
-        <li>Monthly content plan: what to post and when</li>
-        <li>On-time delivery with 2 revisions per video</li>
-      </ul>
-      <a class="btn btn-primary" href="#contact">Request a free sample</a>
-      <p class="note">Just send your footage. We handle the rest.</p>
-    </div>
-  </div>
-</section>
-
 <section id="how">
   <div class="wrap">
     <h2>Your next client starts here.</h2>
@@ -221,11 +218,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
-<section class="pilot">
+<section class="pricing" id="pricing">
   <div class="wrap">
-    <h2>Not sure yet? Start with a 6-video pilot month.</h2>
-    <p>Try the process on a smaller scale. If you like the results, move up to the full 12 videos.</p>
-    <a class="btn" href="#contact">Start with a pilot</a>
+    <h2>Pick your plan.</h2>
+    <p class="lede">Every plan includes content planning, full editing, motion graphics and on-time delivery. Just send your footage.</p>
+    <div class="plans">
+
+      <div class="plan">
+        <h3>Starter</h3>
+        <p class="vol">12 videos / month <span>3 per week</span></p>
+        <p class="price"><s>$1,100</s> <b>$935</b><small>first month</small></p>
+        <ul>
+          <li>Content planning: topics, hooks, scripts and a footage guide</li>
+          <li>Full editing + captions</li>
+          <li>Motion graphics</li>
+          <li>Support chat, reply within 24 hours</li>
+          <li>3 revisions per video</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
+      </div>
+
+      <div class="plan featured">
+        <span class="badge">Most Popular</span>
+        <h3>Growth</h3>
+        <p class="vol">20 videos / month <span>5 per week</span></p>
+        <p class="price"><s>$1,700</s> <b>$1,445</b><small>first month</small></p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Posting calendar</li>
+          <li>Weekly 15-minute check-in</li>
+          <li>Monthly written performance review</li>
+          <li>5 revisions per video</li>
+        </ul>
+        <a class="btn btn-primary" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
+      </div>
+
+      <div class="plan">
+        <h3>Scale</h3>
+        <p class="vol">30 videos / month <span>daily</span></p>
+        <p class="price"><s>$2,600</s> <b>$2,210</b><small>first month</small></p>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Monthly performance review on a live call</li>
+          <li>Unlimited revisions (within 7 days of delivery)</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
+      </div>
+
+    </div>
+    <p class="note">Only 3 new spots this month: 15% off your first month, in return for a short testimonial and results screenshot after month one. From month two, regular prices apply.</p>
   </div>
 </section>
 
@@ -234,7 +275,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h2>A few things you might be wondering.</h2>
     <details><summary>What footage do I need to send?</summary><p>Anything you can record on a phone: talking-head clips, training sessions, client moments. We handle the rest.</p></details>
     <details><summary>How fast is delivery?</summary><p>[Add your turnaround, for example: first batch within 5–7 days, then weekly.]</p></details>
-    <details><summary>How many revisions do I get?</summary><p>Two revisions per video.</p></details>
+    <details><summary>How many revisions do I get?</summary><p>Starter includes 3 revisions per video, Growth includes 5, and Scale has unlimited revisions within 7 days of delivery.</p></details>
     <details><summary>Can I cancel anytime?</summary><p>[Add your policy, for example: yes, month to month with no long contract.]</p></details>
     <details><summary>Do you guarantee clients?</summary><p>We guarantee quality and on-time delivery. Results also depend on your offer and how you follow up with leads, so we can’t promise a specific number of clients.</p></details>
   </div>
@@ -244,23 +285,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <h2>Want to see what your content could look like?</h2>
     <p class="lede">Share your footage in a Drive folder and we’ll review it. If it’s a fit, we’ll send you a free sample.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="https://formspree.io/f/maeepvdd" method="POST">
       <label>Name<input type="text" name="name" placeholder="Your name" required></label>
       <label>Instagram handle<input type="text" name="instagram" placeholder="@yourhandle" required></label>
       <label>Email<input type="email" name="email" placeholder="you@example.com" required></label>
-      <label>Google Drive folder link<input type="url" name="drive_link" placeholder="Set the folder to 'Anyone with the link can view'" required></label>
+      <label>Google Drive folder link<span class="hint">Upload all the footage you want in your sample to a folder in your Google Drive. Right-click the folder, choose Share, set General access to “Anyone with the link” (Viewer), then copy the link and paste it below.</span><input type="url" name="drive_link" placeholder="Paste your Drive folder link here" required></label>
       <label>What’s your main goal?<input type="text" name="goal" placeholder="e.g. more clients, consistent posting" required></label>
       <button class="btn btn-primary" type="submit">Request my free sample</button>
     </form>
     <p id="thanks" hidden style="margin-top:18px;color:#d8d2d2">Thanks! We’ll review your files and details and confirm by email. If it’s a fit, we’ll send your sample.</p>
-    <p class="alt">Prefer to talk? <a href="https://calendly.com/YOUR-CALENDLY-LINK" target="_blank" rel="noopener">Book a call</a></p>
+    <p class="alt">Prefer to talk? <a href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a></p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <span>phaze media.</span>
-    <span><a href="mailto:daniyal@phazemedia.co">daniyal@phazemedia.co</a> &nbsp;|&nbsp; <a href="https://instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener">Instagram</a></span>
+    <span><a href="mailto:daniyal@phazemedia.co">daniyal@phazemedia.co</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/phazemedia.co" target="_blank" rel="noopener">Instagram</a></span>
     <span>&copy; 2026 Phaze Media</span>
   </div>
 </footer>
