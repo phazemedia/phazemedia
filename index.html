@@ -50,7 +50,19 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .hero p{font-size:19px;color:var(--muted);max-width:600px;margin:26px 0 22px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .hero p.pitch{color:var(--ink);font-weight:700;font-size:20px;border-left:4px solid var(--maroon);padding-left:16px;margin:0 0 34px}
+.hero .story{max-width:640px;margin-top:44px}
+.hero .story h3{font-size:22px;font-weight:800;margin:0 0 6px;color:var(--ink)}
+.hero .story p{font-size:18px;max-width:none;margin:0 0 30px}
+.hero .story p.close{color:var(--maroon);font-weight:700;margin-bottom:0}
 .hero small{display:block;margin-top:26px;color:var(--muted);font-size:15px}
+
+/* trust */
+.trust{background:var(--mist)}
+.trust .wrap{max-width:720px}
+.trust h2{margin-bottom:44px}
+.trust h3{font-size:clamp(24px,3.4vw,32px);font-weight:800;margin:0 0 10px;color:var(--ink)}
+.trust p{font-size:18px;color:var(--muted);margin:0 0 44px}
+.trust p:last-child{margin-bottom:0}
 
 /* proof */
 .proof{background:var(--ink);color:#fff}
@@ -179,15 +191,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <header class="hero" id="top">
   <div class="wrap">
-    <h1>Posting every day, getting views, and still <em>no clients?</em></h1>
-    <p>You edit late at night, add a quote, add some music, hit upload, and hope this one works. The views come. The DMs don’t. You’re putting in the work. What’s missing is a plan for what to post.</p>
-    <p class="pitch">You send the footage. We plan it, script it, edit it, and turn it into content that brings clients.</p>
+    <h1>You show up for your content. <em>Your content isn’t showing up for you.</em></h1>
+    <div class="story">
+      <h3>Another post. 2,000 views. Zero DMs.</h3>
+      <p>You spent two hours on it. You kept checking your inbox at night. Nothing. And you start wondering if it’s you.</p>
+      <h3>You know your stuff. The video just doesn’t show it.</h3>
+      <p>Your advice could change someone’s life, but the first second is weak and the edit is flat, so they swipe before you get to the good part.</p>
+      <h3>Some weeks you post daily. Some weeks you disappear.</h3>
+      <p>Life gets busy, the ideas run out, and the guilt builds. Then you restart, and the cycle begins again.</p>
+      <p class="close">You don’t need more motivation. You need someone to take the content off your plate.</p>
+    </div>
+    <p class="pitch" style="margin-top:44px">You send the footage. We plan it, script it, edit it, and turn it into content that brings clients.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
       <a class="btn btn-ghost" href="#contact">Request a free sample</a>
     </div>
   </div>
 </header>
+
+<section class="trust">
+  <div class="wrap">
+    <h2>Here’s what the coaches you follow figured out.</h2>
+
+    <h3>The coaches you admire never ask you to buy.</h3>
+    <p>They post a tip that fixes something you’ve been stuck on for months. Then another. Then a client who finally got the result. Somewhere along the way, you stop scrolling and start trusting them.</p>
+
+    <h3>That’s how coaching actually gets sold.</h3>
+    <p>Not with “work with me,” but with content so useful that people feel helped long before they pay.</p>
+
+    <h3>So your content has to do the selling for you.</h3>
+    <p>Free advice that solves a real problem and holds attention to the last second. Real client results that show it works. A steady rhythm, so people know you’ll be there tomorrow.</p>
+
+    <h3>That’s the part we take off your plate.</h3>
+    <p>We don’t just edit your videos. We turn what you already know into content that builds trust, one post at a time.</p>
+  </div>
+</section>
 
 <section class="proof" id="proof">
   <div class="wrap">
