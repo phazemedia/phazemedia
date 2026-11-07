@@ -31,7 +31,15 @@ h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-bottom:12px}
 .btn-ghost:hover{background:var(--maroon);color:#fff}
 :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 
-.slots{background:var(--maroon);color:#fff;text-align:center;padding:10px 16px;font-size:15px;font-weight:500}
+.slots{background:var(--maroon);color:#fff;overflow:hidden;white-space:nowrap;padding:11px 0;font-size:15px;font-weight:600;animation:slotsIn .7s cubic-bezier(.2,.8,.2,1) both}
+.slots-track{display:inline-flex;animation:slotsScroll 36s linear infinite;will-change:transform}
+.slots:hover .slots-track{animation-play-state:paused}
+.slots-group{display:flex;flex-shrink:0}
+.slots-item{display:inline-flex;align-items:center;gap:10px;padding:0 32px}
+.slots-item::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff6b86;flex:none;animation:slotsPulse 1.6s ease-out infinite}
+@keyframes slotsIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes slotsScroll{to{transform:translateX(-50%)}}
+@keyframes slotsPulse{0%{box-shadow:0 0 0 0 rgba(255,107,134,.8)}100%{box-shadow:0 0 0 10px rgba(255,107,134,0)}}
 
 /* nav */
 nav{position:sticky;top:12px;z-index:10;width:calc(100% - 32px);max-width:1080px;margin:12px auto 0;border-radius:999px;background:rgba(255,255,255,.45);-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);border:1px solid rgba(255,255,255,.65);box-shadow:0 8px 32px rgba(20,20,20,.14),inset 0 1px 0 rgba(255,255,255,.8)}
@@ -68,7 +76,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .cs-stat span{display:block;margin-top:8px;color:#bdb6b6;font-size:15px}
 .cs-text{max-width:720px;margin-top:72px}
 .cs-text p{color:#e6e0e0;font-size:18px;margin:0 0 20px}
-.cs-text p.end{color:#fff;font-weight:700;margin-bottom:0}
+.cs-text p:last-child{margin-bottom:0}
 
 .cs-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px;align-items:start}
 .cs-col{background:#1c1c1c;border:1px solid #3a3a3a;border-radius:16px;padding:24px;display:grid;gap:18px}
@@ -208,12 +216,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .reels{grid-template-columns:repeat(2,1fr)}
   .offer-card{padding:26px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.slots,.slots-item::before{animation:none}.slots-track{animation:none;display:flex;justify-content:center;width:100%}.slots-group{display:block}.slots-group .slots-item:not(:first-child),.slots-group+.slots-group{display:none}}
 </style>
 </head>
 <body>
 
-<div class="slots">Only 3 new spots this month: 15% off your first month.</div>
+<div class="slots" role="region" aria-label="Offer"><div class="slots-track"><div class="slots-group"><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span></div><div class="slots-group" aria-hidden="true"><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span><span class="slots-item">Only 3 new spots this month: 15% off your first month.</span></div></div></div>
 
 <nav>
   <div class="wrap">
@@ -294,7 +302,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="cs-text">
       <p>Jermaine is an IFBB Pro who helps natural bodybuilders get shredded and turn pro. When he came to us, he’d been posting for years: a workout clip, a song on top, upload. People watched, but his page never moved past 54K, and nobody watching could tell he even coached.</p>
       <p>So we started there. We helped him launch his online course. Then we worked on how he shows up on camera: better hooks so people stay past the first few seconds, scripts that get to the point, faster and more energetic delivery, and cleaner editing. We put his clients at the centre of the content, their journeys, their challenge wins, and the honest pros and cons of every method.</p>
-      <p class="end">Now he’s at 97K, with 7M views in 30 days, and people are messaging him about coaching. Not because we told anyone he coaches. Because they could finally see it.</p>
+      <p>Now he’s at 97K, with 7M views in 30 days, and people are messaging him about coaching. Not because we told anyone he coaches. Because they could finally see it.</p>
     </div>
   </div>
 </section>
