@@ -395,9 +395,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <h2>Our work.</h2>
     <p class="lede">Short-form edits built to stop the scroll.</p>
-    <!-- Featured: reels/reel-1.mp4 + reels/poster-1.jpg. Others: reels/reel-2.mp4 ... reel-4.mp4. Fill hook + caption lines under each; empty lines stay hidden. -->
+    <!-- Featured: reel-1.mp4 + poster-1.jpg. Others: reel-2.mp4 ... reel-4.mp4. Fill hook + caption lines under each; empty lines stay hidden. -->
     <div class="feature">
-      <div class="reel"><video src="reels/reel-1.mp4" poster="reels/poster-1.jpg" controls playsinline preload="metadata"></video></div>
+      <div class="reel"><video src="reel-1.mp4" poster="poster-1.jpg" controls playsinline preload="metadata"></video></div>
       <div>
         <h3>Why this one worked</h3>
         <ol class="why">
@@ -410,9 +410,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
 
     <div class="reels">
-      <div class="reel-card"><div class="reel"><video src="reels/reel-2.mp4" controls muted playsinline preload="metadata"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
-      <div class="reel-card"><div class="reel"><video src="reels/reel-3.mp4" controls muted playsinline preload="metadata"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
-      <div class="reel-card"><div class="reel"><video src="reels/reel-4.mp4" controls muted playsinline preload="metadata"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
+      <div class="reel-card"><div class="reel"><video src="reel-2.mp4" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
+      <div class="reel-card"><div class="reel"><video src="reel-3.mp4" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
+      <div class="reel-card"><div class="reel"><video src="reel-4.mp4" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
     </div>
   </div>
 </section>
