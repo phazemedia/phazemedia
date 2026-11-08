@@ -162,6 +162,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .reel-card p{margin:12px 0 0;font-size:15px;color:var(--muted)}
 .reel-card p.reel-hook{font-weight:700;color:var(--ink);font-size:16px}
+.reel-card p.reel-tag{display:inline-block;margin:14px 0 0;padding:6px 14px;border-radius:999px;background:var(--mist);color:var(--maroon);font-weight:700;font-size:14px}
 .reel-card p:empty{display:none}
 .reel{aspect-ratio:9/16;background:var(--ink);border-radius:12px;overflow:hidden}
 .reel video{width:100%;height:100%;object-fit:cover;display:block}
@@ -395,7 +396,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <h2>Our work.</h2>
     <p class="lede">Short-form edits built to stop the scroll.</p>
-    <!-- Featured: reel-1.mp4 + poster-1.jpg. Others: reel-2.mp4 ... reel-4.mp4. Fill hook + caption lines under each; empty lines stay hidden. -->
+    <!-- Featured: reel-1.mp4 + poster-1.jpg. Others: reel-2.mp4 ... reel-4.mp4. Write the style (Hook-based / Caption-based) in each reel-tag; empty tags stay hidden. -->
     <div class="feature">
       <div class="reel"><video src="reel-1.mp4" poster="poster-1.jpg" controls playsinline preload="metadata"></video></div>
       <div>
@@ -410,9 +411,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
 
     <div class="reels">
-      <div class="reel-card"><div class="reel"><video src="reel-2.mp4" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
-      <div class="reel-card"><div class="reel"><video src="reel-3.mp4" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
-      <div class="reel-card"><div class="reel"><video src="reel-4.mp4" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
+      <div class="reel-card"><div class="reel"><video src="reel-2.mp4" poster="poster-2.jpg" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-tag">Hook-based</p></div>
+      <div class="reel-card"><div class="reel"><video src="reel-3.mp4" poster="poster-3.jpg" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-tag">Caption-based</p></div>
+      <div class="reel-card"><div class="reel"><video src="reel-4.mp4" poster="poster-4.jpg" controls muted playsinline preload="metadata" onerror="this.closest('.reel-card').remove()"></video></div><p class="reel-tag">Curiosity-based</p></div>
     </div>
   </div>
 </section>
