@@ -179,7 +179,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .note{margin-top:16px;color:var(--muted);font-size:15px}
 
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+@media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
 .step{border-top:3px solid var(--maroon);padding-top:18px}
 .step b{font-family:var(--display);font-size:34px;color:var(--maroon);display:block}
 .step h3{font-size:22px;margin:4px 0 6px}
@@ -424,11 +425,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="how">
   <div class="wrap">
     <h2>Your next client starts here.</h2>
-    <p class="lede">Three steps, and only the first one is yours.</p>
+    <p class="lede">Four steps. We guide you through each one.</p>
     <div class="steps">
-      <div class="step"><b>1</b><h3>You send footage</h3><p>Raw clips or phone videos. No need to tidy anything up.</p></div>
-      <div class="step"><b>2</b><h3>We script, edit and plan</h3><p>Hooks, cuts, captions and a posting plan for the month.</p></div>
-      <div class="step"><b>3</b><h3>You post and get leads</h3><p>Your content starts turning viewers into DMs and calls.</p></div>
+      <div class="step"><b>1</b><h3>Quick call</h3><p>Tell us about your content and goals. If we’re a fit, you fill a short form and confirm your plan.</p></div>
+      <div class="step"><b>2</b><h3>We plan your month</h3><p>You get the topics for the whole month, so you always know what we’ll make and post.</p></div>
+      <div class="step"><b>3</b><h3>You get scripts and a filming guide</h3><p>A ready script for every video, how to say the hook, how to speak on camera, and how to shoot it with your phone.</p></div>
+      <div class="step"><b>4</b><h3>You film, we edit</h3><p>Send us the footage. We add captions, cuts and motion graphics, and end every video with a clear call to action so viewers become leads.</p></div>
     </div>
   </div>
 </section>
