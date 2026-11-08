@@ -111,6 +111,75 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .strip-text p{color:var(--muted);font-size:16px;max-width:560px}
 @media(max-width:700px){.strip-card{grid-template-columns:1fr;gap:18px;padding:22px}.strip-card .btn{text-align:center}}
 
+/* proof */
+.proof{background:var(--ink);color:#fff}
+.proof .lede{color:#bdb6b6}
+.proof-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:stretch}
+.stat-row{display:flex;gap:34px;flex-wrap:wrap;margin:8px 0 24px}
+.stat b{display:block;font-family:var(--display);font-size:clamp(44px,6vw,68px);line-height:1;font-weight:800}
+.stat span{color:#bdb6b6;font-size:15px}
+.stat:first-child b{color:#ff6b86}
+.proof p.story{color:#e6e0e0;max-width:680px;margin-bottom:18px}
+.proof .stat-row{margin:26px 0 32px}
+.shots{margin-top:34px;display:grid;gap:14px;max-width:760px}
+.shots img{display:block;width:100%;border-radius:12px;border:1px solid #333}
+.shots .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shots .row:empty{display:none}
+.shot{border:2px dashed #555;border-radius:10px;min-height:260px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#9d9696;font-size:15px}
+.shot img{max-width:100%;border-radius:8px}
+
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.reel{aspect-ratio:9/16;background:var(--ink);border-radius:12px;overflow:hidden}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+
+/* offer */
+.offer{background:var(--mist)}
+.offer-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:40px;max-width:640px}
+.offer-card ul{list-style:none;margin:22px 0 30px}
+.offer-card li{padding:11px 0 11px 34px;position:relative;border-bottom:1px solid var(--line)}
+.offer-card li:last-child{border-bottom:0}
+.offer-card li::before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:3px solid var(--maroon);border-bottom:3px solid var(--maroon);transform:rotate(-45deg)}
+.note{margin-top:16px;color:var(--muted);font-size:15px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step{border-top:3px solid var(--maroon);padding-top:18px}
+.step b{font-family:var(--display);font-size:34px;color:var(--maroon);display:block}
+.step h3{font-size:22px;margin:4px 0 6px}
+.step p{color:var(--muted);font-size:16px}
+
+/* pilot */
+.pilot{background:var(--maroon);color:#fff;text-align:center}
+.pilot h2{max-width:720px;margin:0 auto 14px}
+.pilot p{max-width:520px;margin:0 auto 28px;color:#f1d7dc}
+.pilot .btn{background:#fff;color:var(--maroon);border-color:#fff}
+.pilot .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* pricing */
+.pricing{background:var(--mist)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;position:relative}
+.plan.featured{border:2px solid var(--maroon);box-shadow:0 14px 40px rgba(128,0,32,.14)}
+.badge{position:absolute;top:-14px;left:28px;background:var(--maroon);color:#fff;font-size:13px;font-weight:700;padding:4px 14px;border-radius:999px}
+.plan h3{font-size:26px;font-weight:800}
+.vol{margin:6px 0 18px;font-weight:700}
+.vol span{display:block;font-weight:400;color:var(--muted);font-size:15px}
+.price{margin-bottom:20px}
+.price s{color:var(--muted);font-size:18px}
+.price b{font-family:var(--display);font-size:44px;font-weight:800;letter-spacing:-.02em;margin-left:6px}
+.price small{display:block;color:var(--maroon);font-weight:700;font-size:14px}
+.plan ul{list-style:none;margin-bottom:28px;flex:1}
+.plan li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:16px}
+.plan li:last-child{border-bottom:0}
+.plan li::before{content:"";position:absolute;left:3px;top:16px;width:12px;height:7px;border-left:3px solid var(--maroon);border-bottom:3px solid var(--maroon);transform:rotate(-45deg)}
+.plan .btn{text-align:center}
+.pricing .note{margin-top:26px;max-width:720px}
+
+.custom{margin-top:24px;background:#fff;border:2px dashed var(--maroon);border-radius:14px;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.custom h3{font-size:22px;font-weight:800}
+.custom p{color:var(--muted);margin-top:4px}
+
 /* founder */
 .founder{background:var(--mist)}
 .founder-grid{display:grid;grid-template-columns:280px 1fr;gap:64px;align-items:start}
