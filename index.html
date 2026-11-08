@@ -116,6 +116,22 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .photo img{object-position:50% 22%}
 @media(max-width:700px){.strip-card{grid-template-columns:1fr;gap:20px;padding:28px 24px;justify-items:start}.strip-card .photo{width:120px}.strip-card .btn{width:100%;text-align:center}}
 
+/* story: intro + hook in one section */
+.story{background:var(--mist)}
+.story-grid{display:grid;grid-template-columns:340px 1fr;gap:72px;align-items:start}
+.story-photo{position:sticky;top:110px}
+.story .photo{aspect-ratio:4/5;border-radius:22px;box-shadow:0 0 0 3px #ff6b86,0 24px 70px rgba(128,0,32,.38)}
+.story .photo span{font-size:120px}
+.story-copy{max-width:640px}
+.story-intro{padding-bottom:28px;margin-bottom:40px;border-bottom:1px solid var(--line)}
+.story-intro b{display:block;font-family:var(--display);font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.story-intro p{margin-top:6px;font-size:17px;color:var(--muted)}
+.story-copy h2{margin-bottom:40px}
+.story-copy h3{font-size:clamp(24px,3.4vw,32px);font-weight:800;margin:0 0 10px;color:var(--ink)}
+.story-copy>p{font-size:18px;color:var(--muted);margin:0 0 44px}
+.story-copy>p:last-child{margin-bottom:0}
+@media(max-width:800px){.story-grid{grid-template-columns:1fr;gap:36px}.story-photo{position:static;max-width:260px}}
+
 /* proof */
 .proof{background:var(--ink);color:#fff}
 .proof .lede{color:#bdb6b6}
@@ -333,32 +349,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
-<section class="trust">
-  <div class="wrap">
-    <h2>Here’s what the coaches you follow figured out.</h2>
-
-    <h3>The coaches you admire never ask you to buy.</h3>
-    <p>They post a tip that fixes something you’ve been stuck on for months. Then another. Then a client who finally got the result. Somewhere along the way, you stop scrolling and start trusting them.</p>
-
-    <h3>That’s how coaching actually gets sold.</h3>
-    <p>Not with “work with me,” but with content so useful that people feel helped long before they pay.</p>
-
-    <h3>So your content has to do the selling for you.</h3>
-    <p>Free advice that solves a real problem and holds attention to the last second. Real client results that show it works. A steady rhythm, so people know you’ll be there tomorrow.</p>
-
-    <h3>That’s the part we take off your plate.</h3>
-    <p>We don’t just edit your videos. We turn what you already know into content that builds trust, one post at a time.</p>
-  </div>
-</section>
-
-<section class="strip">
-  <div class="wrap">
-    <div class="strip-card">
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="story-photo">
       <div class="photo"><span>D</span><img src="daniyal.jpg" alt="Daniyal, founder of Phaze Media" onerror="this.style.display='none'"></div>
-      <div class="strip-text">
-        <h3>Hi, I’m Daniyal, founder of Phaze Media.</h3>
-        <p>I started editing at 14 and have been editing fitness content for almost 4 years. I built this agency around one idea: content that does the selling for you.</p>
+    </div>
+    <div class="story-copy">
+      <div class="story-intro">
+        <b>Hi, I’m Daniyal, founder of Phaze Media.</b>
+        <p>I started editing at 14 and have been editing fitness content for almost 4 years.</p>
       </div>
+
+      <h2>Here’s what the coaches you follow figured out.</h2>
+
+      <h3>The coaches you admire never ask you to buy.</h3>
+      <p>They post a tip that fixes something you’ve been stuck on for months. Then another. Then a client who finally got the result. Somewhere along the way, you stop scrolling and start trusting them.</p>
+
+      <h3>That’s how coaching actually gets sold.</h3>
+      <p>Not with “work with me,” but with content so useful that people feel helped long before they pay.</p>
+
+      <h3>So your content has to do the selling for you.</h3>
+      <p>Free advice that solves a real problem and holds attention to the last second. Real client results that show it works. A steady rhythm, so people know you’ll be there tomorrow.</p>
+
+      <h3>That’s the part we take off your plate.</h3>
+      <p>We don’t just edit your videos. We turn what you already know into content that builds trust, one post at a time.</p>
     </div>
   </div>
 </section>
