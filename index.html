@@ -150,7 +150,19 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .shot img{max-width:100%;border-radius:8px}
 
 /* reels */
-.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feature{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:center;margin:48px 0 64px}
+.feature .reel{box-shadow:0 22px 60px rgba(128,0,32,.28)}
+.feature h3{font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:0 0 28px}
+.why{list-style:none;margin:0;padding:0;display:grid;gap:24px;max-width:560px}
+.why li{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start}
+.why .n{width:40px;height:40px;border-radius:50%;background:var(--maroon);color:#fff;font-family:var(--display);font-weight:800;display:grid;place-items:center}
+.why b{display:block;font-size:18px;color:var(--ink);margin-bottom:2px}
+.why span{color:var(--muted);font-size:16px}
+.why-flow{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-weight:700;color:var(--ink);max-width:560px}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.reel-card p{margin:12px 0 0;font-size:15px;color:var(--muted)}
+.reel-card p.reel-hook{font-weight:700;color:var(--ink);font-size:16px}
+.reel-card p:empty{display:none}
 .reel{aspect-ratio:9/16;background:var(--ink);border-radius:12px;overflow:hidden}
 .reel video{width:100%;height:100%;object-fit:cover;display:block}
 
@@ -256,6 +268,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .cs-stat + .cs-stat{border-top:1px solid #3a3a3a}
   .photo{max-width:260px}
   .reels{grid-template-columns:repeat(2,1fr)}
+  .feature{grid-template-columns:1fr;gap:32px}
+  .feature .reel{max-width:320px}
   .offer-card{padding:26px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.slots,.slots-item::before{animation:none}.slots-track{animation:none;display:flex;justify-content:center;width:100%}.slots-group{display:block}.slots-group .slots-item:not(:first-child),.slots-group+.slots-group{display:none}}
@@ -381,12 +395,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <h2>Our work.</h2>
     <p class="lede">Short-form edits built to stop the scroll.</p>
-    <!-- Put your reels in a folder called "reels" next to index.html and name them reel-1.mp4 ... reel-4.mp4 -->
+    <!-- Featured: reels/reel-1.mp4 + reels/poster-1.jpg. Others: reels/reel-2.mp4 ... reel-4.mp4. Fill hook + caption lines under each; empty lines stay hidden. -->
+    <div class="feature">
+      <div class="reel"><video src="reels/reel-1.mp4" poster="reels/poster-1.jpg" controls playsinline preload="metadata"></video></div>
+      <div>
+        <h3>Why this one worked</h3>
+        <ol class="why">
+          <li><span class="n">1</span><div><b>The hook</b><span>“This is good. This is really good. But this is the best.” You keep watching because you want to see the best one.</span></div></li>
+          <li><span class="n">2</span><div><b>The video</b><span>Three arm exercises, fast and clear. Easy to follow, easy to save.</span></div></li>
+          <li><span class="n">3</span><div><b>The CTA</b><span>Random exercises on random days give random results. Comment “Arms” and get the guide.</span></div></li>
+        </ol>
+        <p class="why-flow">Comment &rarr; free guide &rarr; trust &rarr; client.</p>
+      </div>
+    </div>
+
     <div class="reels">
-      <div class="reel"><video src="reels/reel-1.mp4" controls muted playsinline preload="metadata"></video></div>
-      <div class="reel"><video src="reels/reel-2.mp4" controls muted playsinline preload="metadata"></video></div>
-      <div class="reel"><video src="reels/reel-3.mp4" controls muted playsinline preload="metadata"></video></div>
-      <div class="reel"><video src="reels/reel-4.mp4" controls muted playsinline preload="metadata"></video></div>
+      <div class="reel-card"><div class="reel"><video src="reels/reel-2.mp4" controls muted playsinline preload="metadata"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
+      <div class="reel-card"><div class="reel"><video src="reels/reel-3.mp4" controls muted playsinline preload="metadata"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
+      <div class="reel-card"><div class="reel"><video src="reels/reel-4.mp4" controls muted playsinline preload="metadata"></video></div><p class="reel-hook"></p><p class="reel-cap"></p></div>
     </div>
   </div>
 </section>
