@@ -501,28 +501,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section>
   <div class="wrap faq">
     <h2>A few things you might be wondering.</h2>
-    <details><summary>What footage do I need to send?</summary><p>Anything you can record on a phone: talking-head clips, training sessions, client moments. We handle the rest.</p></details>
-    <details><summary>How fast is delivery?</summary><p>[Add your turnaround, for example: first batch within 5–7 days, then weekly.]</p></details>
+    <details><summary>Do I have to figure out what to film?</summary><p>No. We plan your whole month of topics and write a script for every video, with a simple guide on how to film it with your phone. You just film and send us the footage.</p></details>
+    <details><summary>What do you actually send me?</summary><p>Edited videos with captions, hooks and motion graphics, plus a monthly content plan. On Growth and Scale, we post the videos for you too.</p></details>
+    <details><summary>How fast is delivery?</summary><p>Each video is ready for your review within 12 hours of us receiving your footage.</p></details>
     <details><summary>How many revisions do I get?</summary><p>Starter includes 3 revisions per video, Growth includes 5, and Scale has unlimited revisions within 7 days of delivery.</p></details>
-    <details><summary>Can I cancel anytime?</summary><p>[Add your policy, for example: yes, month to month with no long contract.]</p></details>
-    <details><summary>Do you guarantee clients?</summary><p>We guarantee quality and on-time delivery. Results also depend on your offer and how you follow up with leads, so we can’t promise a specific number of clients.</p></details>
+    <details><summary>Can I cancel anytime?</summary><p>Yes. There are no contracts. You can cancel anytime, and your plan simply won’t renew for the next month.</p></details>
+    <details><summary>How much does it cost?</summary><p>Plans range from about $800 to $2,200 per month, depending on your goals and how many videos you need. Book a short call and we’ll shape a plan around you.</p></details>
+    <details><summary>Do you guarantee clients?</summary><p>We can’t promise a number of clients, and nobody honestly can. What we do is build content designed to bring in leads: videos that hold attention, a clear call to action and a free guide that builds trust. Turning those leads into clients depends on your offer and how you follow up. We do guarantee quality and on-time delivery.</p></details>
   </div>
 </section>
 
 <section class="final" id="contact">
   <div class="wrap">
-    <h2>Want to see what your content could look like?</h2>
-    <p class="lede">Share your footage in a Drive folder and we’ll review it. If it’s a fit, we’ll send you a free sample.</p>
-    <form action="https://formspree.io/f/maeepvdd" method="POST">
-      <label>Name<input type="text" name="name" placeholder="Your name" required></label>
-      <label>Instagram handle<input type="text" name="instagram" placeholder="@yourhandle" required></label>
-      <label>Email<input type="email" name="email" placeholder="you@example.com" required></label>
-      <label>Google Drive folder link<span class="hint">Upload all the footage you want in your sample to a folder in your Google Drive. Right-click the folder, choose Share, set General access to “Anyone with the link” (Viewer), then copy the link and paste it below.</span><input type="url" name="drive_link" placeholder="Paste your Drive folder link here" required></label>
-      <label>What’s your main goal?<input type="text" name="goal" placeholder="e.g. more clients, consistent posting" required></label>
-      <button class="btn btn-primary" type="submit">Request my free sample</button>
-    </form>
-    <p id="thanks" hidden style="margin-top:18px;color:#d8d2d2">Thanks! We’ll review your files and details and confirm by email. If it’s a fit, we’ll send your sample.</p>
-    <p class="alt">Prefer to talk? <a href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a></p>
+    <h2>Ready for your next client?</h2>
+    <p class="lede">Book a short call. We’ll look at your content and goals, and tell you honestly if we’re a fit.</p>
+    <a class="btn btn-primary" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
   </div>
 </section>
 
@@ -534,17 +527,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </footer>
 
-<script>
-document.querySelector("form").addEventListener("submit",async e=>{
-  e.preventDefault();
-  const f=e.target;
-  try{
-    const r=await fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}});
-    if(r.ok){f.hidden=true;document.getElementById("thanks").hidden=false;}
-    else{alert("Something went wrong. Please email daniyal@phazemedia.co.");}
-  }catch(err){alert("Something went wrong. Please email daniyal@phazemedia.co.");}
-});
-</script>
 <script>
 window.addEventListener('load',function(){
   var d=document.getElementById('dms');
