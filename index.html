@@ -213,9 +213,14 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .plan .btn{text-align:center}
 .pricing .note{margin-top:26px;max-width:720px}
 
-.custom{margin-top:24px;background:#fff;border:2px dashed var(--maroon);border-radius:14px;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.custom h3{font-size:22px;font-weight:800}
-.custom p{color:var(--muted);margin-top:4px}
+.plan-for{margin:4px 0 20px;color:var(--muted);font-size:15px}
+.custom{margin-top:24px;background:#fff;border:2px dashed var(--maroon);border-radius:16px;padding:36px 32px}
+.custom h3{font-size:clamp(24px,3vw,32px);font-weight:800}
+.custom>p{color:var(--muted);margin:8px 0 22px;max-width:640px}
+.custom-list{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.custom-list li{background:var(--mist);border-radius:10px;padding:14px 16px;font-weight:600;color:var(--ink)}
+.custom-foot{margin:0 0 20px;color:var(--ink);font-weight:700}
+@media(max-width:700px){.custom{padding:26px 20px}.custom-list{grid-template-columns:1fr}}
 
 /* founder */
 .founder{background:var(--mist)}
@@ -438,64 +443,56 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="pricing" id="pricing">
   <div class="wrap">
     <h2>Pick your plan.</h2>
-    <p class="lede">Every plan includes content planning, full editing, motion graphics and on-time delivery. Just send your footage.</p>
+    <p class="lede">Every plan includes content planning (topics, hooks, scripts and a filming guide), full editing with captions, motion graphics, 24-hour support chat and on-time delivery.</p>
     <div class="plans">
 
       <div class="plan">
         <h3>Starter</h3>
+        <p class="plan-for">For coaches building a consistent habit.</p>
         <ul>
           <li>12 videos / month (3 per week)</li>
-          <li>Content planning: topics, hooks, scripts and footage guide</li>
-          <li>Full editing + captions</li>
-          <li>Motion graphics</li>
-          <li class="no">We post for you</li>
-          <li class="no">Weekly 15-minute check-in</li>
-          <li class="no">Monthly performance review</li>
-          <li>Support chat, reply within 24 hours</li>
           <li>3 revisions per video</li>
-          <li>On-time delivery</li>
+          <li>You post the videos yourself</li>
         </ul>
         <a class="btn btn-ghost" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
       </div>
       <div class="plan featured">
         <span class="badge">Most Popular</span>
         <h3>Growth</h3>
+        <p class="plan-for">For coaches who want to grow.</p>
         <ul>
           <li>20 videos / month (5 per week)</li>
-          <li>Content planning: topics, hooks, scripts and footage guide</li>
-          <li>Full editing + captions</li>
-          <li>Motion graphics</li>
           <li>We post for you, with a posting calendar</li>
           <li>Weekly 15-minute check-in</li>
-          <li>Monthly performance review: written</li>
-          <li>Support chat, reply within 24 hours</li>
+          <li>Monthly performance review (written)</li>
           <li>5 revisions per video</li>
-          <li>On-time delivery</li>
         </ul>
         <a class="btn btn-primary" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
       </div>
       <div class="plan">
         <h3>Scale</h3>
+        <p class="plan-for">For coaches who want to be everywhere.</p>
         <ul>
           <li>30 videos / month (daily)</li>
-          <li>Content planning: topics, hooks, scripts and footage guide</li>
-          <li>Full editing + captions</li>
-          <li>Motion graphics</li>
           <li>We post for you, with a posting calendar</li>
           <li>Weekly 15-minute check-in</li>
-          <li>Monthly performance review: live call</li>
-          <li>Support chat, reply within 24 hours</li>
+          <li>Monthly performance review (live call)</li>
           <li>Unlimited revisions (within 7 days of delivery)</li>
-          <li>On-time delivery</li>
         </ul>
         <a class="btn btn-ghost" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
       </div>
     </div>
+
     <div class="custom">
-      <div>
-        <h3>Need a different number of videos?</h3>
-        <p>Pricing is shared on a short call. We’ll shape a plan around your goals.</p>
-      </div>
+      <h3>Your goals are different? We’ll build your plan.</h3>
+      <p>Not every coach needs the same thing. Tell us your situation and we’ll shape a plan around it.</p>
+      <ul class="custom-list">
+        <li>You’re launching a course or program</li>
+        <li>You want more client transformation videos</li>
+        <li>You need a different number of videos each month</li>
+        <li>You’re promoting a challenge or event</li>
+      </ul>
+      <p class="custom-foot">Book a call, tell us where you are, and we’ll put together a plan for you.</p>
       <a class="btn btn-primary" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
     </div>
   </div>
