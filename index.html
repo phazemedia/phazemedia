@@ -11,7 +11,7 @@
 <style>
 :root{
   --maroon:#800020; --maroon-dark:#5e0017; --ink:#141414; --paper:#ffffff;
-  --mist:#f5f3f3; --line:#e4dede; --muted:#5f5a5a;
+  --mist:#eeebeb; --line:#e4dede; --muted:#5f5a5a;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"DM Sans","Helvetica Neue",Arial,sans-serif;
 }
@@ -22,7 +22,7 @@ a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 section{padding:88px 0}
 h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em}
-h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-bottom:12px}
+h2{font-size:clamp(32px,5vw,56px);font-weight:800;margin-bottom:14px;letter-spacing:-.03em}
 .lede{color:var(--muted);max-width:560px;margin-bottom:40px}
 .btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:700;text-decoration:none;border:2px solid var(--maroon);transition:background .15s,color .15s;cursor:pointer;font:inherit;font-weight:700}
 .btn-primary{background:var(--maroon);color:#fff}
@@ -304,6 +304,25 @@ h2 em{font-style:normal;color:var(--maroon)}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:700px){section{padding:56px 0}.hero{padding:64px 0 56px}.dms{padding:24px 16px 8px}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---- design pass 2: clearer rhythm ---- */
+.cs-stat b{font-size:clamp(28px,3.8vw,50px);white-space:nowrap}
+.dm-grid{column-count:2;column-gap:20px}
+.dm-grid img{margin-bottom:20px}
+@media(max-width:800px){.dm-grid{column-count:1}}
+/* how it works = full maroon band */
+#how{background:var(--maroon);color:#fff}
+#how h2,#how h3{color:#fff}
+#how .eyebrow{color:#fff}
+#how .eyebrow::before{content:"";display:inline-block;width:28px;height:3px;background:#fff;vertical-align:middle;margin-right:12px}
+#how .lede,#how .step p{color:rgba(255,255,255,.86)}
+#how h2 em{color:#fff;background:linear-gradient(transparent 60%,#000 60%);padding:0 .06em}
+#how .step{border-top-color:#fff}
+#how .step b{color:#fff}
+.pricing .plans{margin-top:36px}
+.promise{padding:92px 0}
+.final h2{text-wrap:balance}
+.promise .fine{max-width:620px;margin:22px auto 0;font-size:14px;line-height:1.6;color:#a8a1a1}
 </style>
 </head>
 <body>
@@ -460,8 +479,17 @@ h2 em{font-style:normal;color:var(--maroon)}
       <div class="step"><b>1</b><h3>Quick call</h3><p>Tell us about your content and goals. If we’re a fit, you fill a short form and confirm your plan.</p></div>
       <div class="step"><b>2</b><h3>We plan your month</h3><p>You get the topics for the whole month, so you always know what we’ll make and post.</p></div>
       <div class="step"><b>3</b><h3>You get scripts and a filming guide</h3><p>A ready script for every video, how to say the hook, how to speak on camera, and how to shoot it with your phone.</p></div>
-      <div class="step"><b>4</b><h3>You film, we edit</h3><p>Send us the footage. We add captions, cuts and motion graphics, and end every video with a clear call to action so viewers become leads. On Growth and Scale, we post it for you too.</p></div>
+      <div class="step"><b>4</b><h3>You film, we edit and post</h3><p>Send us the footage. We add captions, cuts and motion graphics, post it for you, and end every video with a clear call to action so viewers become leads.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="final promise" id="promise">
+  <div class="wrap">
+    <p class="eyebrow">Our 90-day promise</p>
+    <h2>36 qualified calls in 90 days. <em>Or we work for free.</em></h2>
+    <p class="lede">We keep working with you at no extra charge until we get there. A qualified call is someone who books a discovery call with you about your coaching.</p>
+    <p class="fine">This applies when you film the scripts we send, follow the posting plan and stay with us for the 90 days. Closing those calls is up to you: that depends on your offer and your follow-up.</p>
   </div>
 </section>
 
@@ -477,8 +505,8 @@ h2 em{font-style:normal;color:var(--maroon)}
         <p class="plan-for">For coaches building a consistent habit.</p>
         <ul>
           <li>12 videos / month (3 per week)</li>
+          <li>We post for you</li>
           <li>3 revisions per video</li>
-          <li>You post the videos yourself</li>
         </ul>
         <a class="btn btn-ghost" href="https://calendly.com/phazemediaagency/30min" target="_blank" rel="noopener">Book a call</a>
       </div>
@@ -529,12 +557,12 @@ h2 em{font-style:normal;color:var(--maroon)}
     <p class="eyebrow">Questions</p>
     <h2>A few things you <em>might be wondering.</em></h2>
     <details><summary>Do I have to figure out what to film?</summary><p>No. We plan your whole month of topics and write a script for every video, with a simple guide on how to film it with your phone. You just film and send us the footage.</p></details>
-    <details><summary>What do you actually send me?</summary><p>Edited videos with captions, hooks and motion graphics, plus a monthly content plan. On Growth and Scale, we post the videos for you too.</p></details>
+    <details><summary>What do you actually send me?</summary><p>Edited videos with captions, hooks and motion graphics, plus a monthly content plan. We post the videos for you too.</p></details>
     <details><summary>How fast is delivery?</summary><p>Each video is ready for your review within 12 hours of us receiving your footage.</p></details>
     <details><summary>How many revisions do I get?</summary><p>Starter includes 3 revisions per video, Growth includes 5, and Scale has unlimited revisions within 7 days of delivery.</p></details>
-    <details><summary>Can I cancel anytime?</summary><p>Yes. There are no contracts. You can cancel anytime, and your plan simply won’t renew for the next month.</p></details>
+    <details><summary>Can I cancel anytime?</summary><p>You pay month to month. Once a month is paid, we plan and create everything for it, so it can’t be cancelled or refunded partway through. You can stop before the next month starts and your plan simply won’t renew. Our 90-day promise applies when you stay for the full 90 days.</p></details>
     <details><summary>How much does it cost?</summary><p>Plans range from about $800 to $2,200 per month, depending on your goals and how many videos you need. Book a short call and we’ll shape a plan around you.</p></details>
-    <details><summary>Do you guarantee clients?</summary><p>We can’t promise a number of clients, and nobody honestly can. What we do is build content designed to bring in leads: videos that hold attention, a clear call to action and a free guide that builds trust. Turning those leads into clients depends on your offer and how you follow up. We do guarantee quality and on-time delivery.</p></details>
+    <details><summary>Do you guarantee clients?</summary><p>We can’t promise clients, because closing is in your hands. It depends on your offer and how you follow up with your leads. What we do promise is qualified calls: see our 90-day promise above. We also guarantee quality and on-time delivery.</p></details>
   </div>
 </section>
 
